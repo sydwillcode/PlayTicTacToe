@@ -15,8 +15,9 @@ body {
 h1 {
   text-align: center;
   padding: 0em;
-  font-size: 3em;
-  color: #6c63ff;
+  font-size: 4em;
+  color: #e3de4f;
+  text-decoration: underline;
 }
 /* GAME BOARD */
 #board {
