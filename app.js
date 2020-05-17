@@ -4,13 +4,15 @@ let cells = document.querySelectorAll(".row > div");
 for (let square of cells) {
   square.addEventListener("click", cellClicked);
 }
+
 //set a conditon that if true, a function will run to clear square contents
 let gameOver = false;
 //define player as string 'X', so when context is shown on click, it shows an 'X'
+
 let player = "X";
 //select div class "winner" to allow winner's name to show
 let announcement = document.querySelector(".winner");
-//Selects div with button ID "newGame"
+
 //select html button id= 'newGame'
 let newGame = document.querySelector("#newGame");
 //on click of newGame button, run function
@@ -29,25 +31,26 @@ function choosePlayer() {
   } else {
     player = "X";
   }
-  
 }
 
 function cellClicked() {
+  if (gameOver) {
+    cells[i].removeEventListener('click', cellClicked)
+  }
   choosePlayer();
   checkWinner();
 }
 
 function clearBoard() {
-  if (gameOver) {    
-    for (let squares of cells){
-      squares.textContent = ""; 
-      announcement.textContent = ""
-    }
+  for (let squares of cells) {
+    squares.textContent = "";
+    announcement.textContent = "";
+    location.reload();
   }
 }
 
 function checkWinner() {
-    if (
+  if (
     (cells[0].textContent == "X" &&
       cells[1].textContent == "X" &&
       cells[2].textContent == "X") ||
@@ -107,7 +110,7 @@ function checkWinner() {
     announcement.textContent = "O Wins!";
     gameOver = true;
     player = "X";
-    } else if (
+  } else if (
     cells[0].textContent !== "" &&
     cells[1].textContent !== "" &&
     cells[2].textContent !== "" &&
