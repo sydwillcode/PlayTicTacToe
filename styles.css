@@ -1,0 +1,150 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    height: 100vh;
+    background-image: url(./pattern-06.jpg) ;
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive;
+    
+  }
+  
+  h1 {
+    text-align: center;
+      position: fixed;
+      padding: 0em;
+      font-size: 3em;  
+      color: #6C63FF;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  /* BACKGROUND*/
+  
+  /* 
+  .section {
+    margin: none;
+    padding: 4rem;
+    display: block;
+    padding: 12vh;
+    
+  }
+  
+  #sec1 {
+    width: 100%;
+    background-color: #defcf9;
+  }
+  #sec2 {
+    background-color: #cadefc;
+    width: 100%;
+  }
+  #sec3 {
+    background-color: #c3bef0;
+    width: 100%;
+  }
+  #sec4 {
+    background-color: #cca8e9;
+    width: 100%; 
+  }
+  */
+  
+  /*GAME BOARD*/
+  
+  #board {
+    padding: 1em;
+    border-radius: 1em;
+    width: 30em;
+    height: 30em;
+    color: black;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #F8A4D8, #6C63FF);
+    opacity: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+  }
+  
+  
+  .row > div {
+    float: left;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    font-size: 4em;
+    line-height: 2em;
+    color: white;
+  }
+  
+  .row {
+    clear: both;
+    margin: auto;
+    width: 400px;
+  }
+  
+  .top {
+    border-bottom: 7px solid white;
+  }
+  
+  .bottom {
+    border-top: 7px solid white;
+  }
+  
+  .left {
+    border-right: 7px solid white;
+  }
+  
+  .right {
+    border-left: 7px solid white;
+  }
+  
+  .top:hover,
+  .middle:hover,
+  .bottom:hover {
+    cursor: pointer;
+  }
+  /*WINNER ANNOUNCEMENT*/
+  .winner {
+    position: relative;
+      top: -5em;
+      left: 5px;
+      color: #b40998;
+      font-size: 3em;
+      text-align: center;
+      font-weight: bolder;
+      background: pink;
+      display: inline-block
+  }
+  /*NEW GAME BUTTON*/
+  #newGame {
+    position: absolute;
+    bottom: 30px;
+    left: 11.5em;
+    box-shadow: inset 0px 1px 0px 0px #fbafe3;
+    background: linear-gradient(to bottom, #ed57a7 5%, #ef027d 100%);
+    background-color: #ed57a7;
+    border-radius: 17px;
+    border: 1px solid #ee1eb5;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 11px 29px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #c70067;
+  }
+  #newGame:hover {
+    background: linear-gradient(to bottom, #ef027d 5%, #ed57a7 100%);
+    background-color: #ef027d;
+  }
+  
+  
+  
